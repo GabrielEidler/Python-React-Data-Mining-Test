@@ -24,12 +24,6 @@ from pandas import DataFrame as df # premier library for data organization
 page = requests.get("https://locations.familydollar.com/id/")
 soup = BeautifulSoup(page.text, 'html.parser')
 
-# If I want to go beyond english-written websites: 
-""" 
- page = requests.get(URL)
- page.encoding = 'ISO-885901'
- soup = BeautifulSoup(page.text, 'html.parser')
-"""
 # to access a tag saved by bs4, use tag['some_attribute']
 # tags children: tag.contents
 # access full contents with string: re.compile("my_string"), 
@@ -37,8 +31,6 @@ soup = BeautifulSoup(page.text, 'html.parser')
 
 
 dollar_tree_list = soup.find_all(class_ = 'itemlist')
-""" for i in dollar_tree_list[:2]:
-  print(i) """
 
 # Analyse type and length
 
