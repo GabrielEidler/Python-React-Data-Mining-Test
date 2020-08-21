@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+//custom imports
+import FamilyDollar from './components/familyDollar'
 
 class App extends Component {
     render () {
         return (
-            <div>
-                <h1>Hello Fuckers</h1>
-            </div>
+            <BrowserRouter>
+             <Switch>
+                <Route path="/" >
+                    <FamilyDollar />
+                </Route>
+             </Switch>
+            </BrowserRouter>
         );
     }
 }
